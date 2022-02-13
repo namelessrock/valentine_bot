@@ -1,6 +1,5 @@
 from telegram import Update, InlineKeyboardButton, InlineKeyboardMarkup
 from telegram.ext import Updater, CallbackContext, CommandHandler, CallbackQueryHandler
-from secret import TOKEN
 import logging
 
 # Logging
@@ -50,6 +49,7 @@ def confession_reply(update: Update, context: CallbackContext):
 def main() -> None:
     """Run the bot."""
     # Create the Updater and pass it your bot's token.
+    # TOKEN should be a string
     updater = Updater(TOKEN)
 
     # Add handlers
